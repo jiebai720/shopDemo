@@ -1,0 +1,9 @@
+@startuml
+
+FrameworkServlet -->  FrameworkServlet : processRequest()
+
+FrameworkServlet -->  DispatcherServlet : doService()
+
+DispatcherServlet -->  DispatcherServlet : doDispatch()
+
+@enduml

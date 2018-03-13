@@ -1,0 +1,34 @@
+package com.bb.web;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ *
+ *
+ */
+@RestController
+public class HelloController {
+
+    @RequestMapping( value = "/index" )
+    public String index() {
+
+        try {
+            Thread.sleep( 15000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        return "Hello World";
+    }
+
+
+    @RequestMapping(value = "/hello"  , method = RequestMethod.GET )
+    public String hello(@RequestParam String name ) {
+        return "Hello " + name ;
+    }
+
+
+}

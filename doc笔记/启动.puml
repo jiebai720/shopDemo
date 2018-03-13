@@ -1,0 +1,15 @@
+@startuml
+
+HttpServlet --> HttpServletBean : init()
+HttpServletBean --> FrameworkServlet : initServletBean()
+
+
+FrameworkServlet --> FrameworkServlet : initWebApplicationContext()
+
+FrameworkServlet --> DispatcherServlet : onRefresh()
+
+DispatcherServlet --> DispatcherServlet : initStrategies()
+
+
+
+@enduml
